@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>delete</title>
+    </head>
+    <body>
+        <form method="post">
+            
+            {% csrf_token %}
+            <input value="delete" type="submit">
+            <a   href="/{{ student.id }} ">cancel</a>
+        </form>
+    </body>
+</html>

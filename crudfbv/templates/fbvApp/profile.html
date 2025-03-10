@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>پروفایل کاربری</h2>
+  <p>نام کاربری: {{ user.username }}</p>
+  <p>ایمیل: {{ user.email }}</p>
+  {% if user.profile.avatar %}
+    <img src="{{ user.profile.avatar.url }}" alt="Avatar" width="100">
+  {% endif %}
+  {% if user.profile.bio %}
+    <p>بیوگرافی: {{ user.profile.bio }}</p>
+  {% else %}
+    <p>بیوگرافی‌ای ثبت نشده است.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <h1><a href = "create/">create</a></h1>
+        <br>
+        <h1><a href = "accounts/login/">login</a></h1>
+        <h1><a href = "accounts/logout/">logout</a></h1>
+    </head>
+    <body>
+        {%if students %}
+        <table>
+            <thead>
+              <th>firstname</th>
+              <th>lastname</th>
+              <th>numeric</th>
+              <th>Delete</th>
+              <th>update</th>
+            </thead>
+            <form method="POST">
+                
+            {%for student in students%}
+                <tr>
+                    <td>{{student.firstname}}</td>
+                    <td>{{student.lastname}}</td>
+                    <td>{{student.numeric}}</td>
+                    <td><a href="delete/{{student.id}}">XX</a></td>
+                   <td><a href="Up/{{student.id}}">__</a></td>
+                </tr>
+            {% endfor %}
+            </form>
+          </table>
+        {% else %}
+            <p>هیج دانش آموزی وجود ندارد</p>
+        {% endif  %}
+    </body>
+</html>

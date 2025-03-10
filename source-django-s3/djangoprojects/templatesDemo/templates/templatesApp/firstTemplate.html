@@ -1,0 +1,13 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/emp.css' %}" />
+	</head>
+	<body>
+		<img src="{% static 'images/employee1.png' %}">
+		<h1>Employee Details:</h1>
+		<p>First Name: {{firstName}}</p>
+		<p>Last Name: {{lastName}}</p>
+		<p>Salary: {{salary}}</p>
+	</body>
+</html>

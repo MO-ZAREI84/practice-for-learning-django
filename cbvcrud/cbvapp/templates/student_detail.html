@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students DETAIL</title>
+</head>
+<body>
+    {% if student %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.firstname }}</td>
+                    <td>{{ student.lastname }}</td>
+                    <td>{{ student.score }}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    {% else %}
+        <h2>The student is not here yet!</h2>
+    {% endif %}
+    <a href="/update/{{ student.id }}">Update</a>
+    <a href="/delete/{{student.id}}">DEL</a>
+</body>
+</html>
